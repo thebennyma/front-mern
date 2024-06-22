@@ -10,7 +10,7 @@ export const projectSchema = z.object({
 })
 
 export const dashboardProjectSchema = z.array(
-    projectSchema.pick({
+    projectSchema.partial({
         _id: true,
         projectName: true,
         clientName: true,
